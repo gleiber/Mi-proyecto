@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workspace</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <!-- Custom fonts for this template -->
+   <!--<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+   <!-- <link href="css/grayscale.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+    <link href="https://blackrockdigital.github.io/startbootstrap-grayscale/css/grayscale.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/metro/css/metro-bootstrap-responsive.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body id="page-top">
+  
+ <!-- Navigation -->
+    <nav class="nav justify-content-end navbar navbar-expand-lg navbar-light navbar-fixed-top navbargGley " id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      My company</a>
+        <div class="collapse navbar-collapse w-nav-menu navbar-expand-lg" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto w-nav-menu">
+        
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#page-top">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#download">Download</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+            <% if user_signed_in? %>
+    <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+  <% else %>
+    <li><%= link_to "Sign in", new_user_session_path %></li>
+    <li><%= link_to "Sign up", new_user_registration_path %></li>
+  <% end %>
+           
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+    
+<%= yield %>
+
+<!-- Footer -->
+    <footer>
+       <div class="fa" >
+                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+              </div>
+      <div class="container text-center">
+        <p>Copyright &copy; Your Website 2017</p>
+      <div class="footer">
+        <div class="w-container">
+          <div class="row-5 w-row">
+            <div class="column-3 w-col w-col-4">
+              <h5 class="h5contact">Dirección:</h5>
+              <div class="textcontact">Av. Nueva Larraín 8624-C. La Reina</div>
+              <h5 class="h5contact">Teléfonos:</h5>
+              <div>
+                <a href="tel:+56978009603" class="link-block-4 w-inline-block">
+                  <div class="textcontact">+56978009603</div>
+                </a>
+                <a href="tel:+56978009717" class="link-block-3 w-inline-block">
+                  <div class="textcontact">+56978009717</div>
+                </a>
+              </div>
+                  <h5 class="h5contact">Correo Electrónico:</h5>
+                  <a href="mailto:contacto@versatile.cl?subject=Consulta..." class="w-inline-block">
+                    <div class="textcontact">contacto@versatile.cl</div>
+                  </a></div>
+              <div class="columnfooter w-col w-col-4">
+                <img src="https://daks2k3a4ib2z.cloudfront.net/598b0f2c22e8860001ad531c/598b19297658f500019fda6a_logo_VERSATILE-WEB.png" width="70" class="imagfooter imagmovil"></div>
+                <div class="column-4 w-clearfix w-col w-col-4">
+                  <div class="html-embed-5 csshtml1 w-embed">
+                    <a href="https://www.facebook.com/" target="_BLANK" style="font-size: 4em; color: white;">
+                      <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                  <div class="html-embed-6 csshtml w-embed">
+                    <a href="https://www.instagram.com/" target="_BLANK" style="font-size: 4em; color: white;">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                      </a>
+                  </div>
+                  <div class="html-embed-7 csshtml2 w-embed">
+                    <a href="https://www.youtube.com/" target="_BLANK" style="font-size: 4em; color:#FDFEFE;">
+                      <i class="fa fa-youtube" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+            </div>
+          </div>
+          </div>
+          </div>
+          
+          
+           <div class="social">
+		<ul>
+			<li><a href="http://www.facebook.com/falconmasters" target="_blank" class="icon-facebook"></a></li>
+			<li><a href="http://www.twitter.com/falconmasters" target="_blank" class="icon-twitter"></a></li>
+			<li><a href="http://www.googleplus.com/falconmasters" target="_blank" class="icon-googleplus"></a></li>
+			<li><a href="http://www.pinterest.com/falconmasters" target="_blank" class="icon-pinterest"></a></li>
+			<li><a href="mailto:contacto@falconmasters.com" class="icon-mail"></a></li>
+		</ul>
+	</div>
+    </footer>
+    
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/grayscale.min.js"></script>
+      <!-- Custom JavaScript for this theme -->
+
+</body>
+</html>
